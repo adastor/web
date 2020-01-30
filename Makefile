@@ -1,12 +1,40 @@
-.PHONY: all index.html index.pl.html
+.PHONY: clean backup
 
-all: index.html index.pl.html
+all: en pl
 
-index.html: .index.md .filter.sed
-	cat .index.md | markdown_py | sed -f .filter.sed > index.html
+md_py: /usr/bin/markdown_py
 
-index.pl.html: .index.pl.md .filter.sed
-	cat .index.pl.md | markdown_py | sed -f .filter.sed > index.pl.html
+/usr/bin/markdown_py:
+	sudo pip3 install Markdown
 
-publish: index.html license.txt index.pl.html
-	ipfs add -w license.txt index*.html style.css script.js
+css: www/css/style.css
+
+js: www/js/script.js
+
+en: www/index.html
+
+pl: www/index-pl.html
+
+license: www/license.txt
+
+www/index.html: index.md filter.sed md_py
+	cat index.md | markdown_py | sed -f filter.sed > www/index.html
+
+www/index-pl.html: index-pl.md filter.sed md_py
+	cat index-pl.md | markdown_py | sed -f filter.sed > www/index-pl.html
+
+publish: en pl css js license www
+	ipfs add -r -w www/index*.html www/license.txt www/js/ www/css/
+	touch publish
+
+clean:
+	find . -name '*~' | xargs -r rm -v
+
+backup: clean repack
+	ipfs add -rHw .
+
+repack:
+	git repack -a -d
+
+push:
+	git push

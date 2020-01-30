@@ -1,9 +1,15 @@
-#head#AdaSTOR/OS &mdash; Your favorite next generation Linux distro
-##id:AdaSTOR:abstract:AdaSTOR O/S:title:Mission Statement
+# head#AdaSTOR/OS &mdash; Your favorite next generation Linux distro
+## id:AdaSTOR:abstract:AdaSTOR O/S:title:Mission Statement
 
-Deliver the best Linux distribution freely to anyone, anywhere,
-spy-free, featuring the latest versions of Open Source Software,
-on a daily basis, without forced or otherwise intrusive update process.
+Deliver the best Linux distribution
+
+- freely to anyone
+- anywhere
+- spy-free
+- with the latest versions of the best Open Source Software
+- on a daily basis &ndash; but without forced or otherwise intrusive update process.
+
+### Purpose
 
 AdaSTOR/OS is SlackwreLinux-current branch repackaged into several SquashFS
 images and delivered to you the DevOps way via iPXE and IPFS (planned).
@@ -17,7 +23,7 @@ ready to be used "as-is" just after being downloaded (no installation step
 required); moreover each participant host may serve them to others via IPFS
 (planned), thus reducing bandwith cost of distribution.
 
-##sep#id:Slackware:abstract:is Slackware Linux:title:Origins
+## sep#id:Slackware:abstract:is Slackware Linux:title:Origins
 
 Few years ago I compressed my entire Slackware system with SquashFS to save
 some space - and was amazed to see how much the system gained in terms of
@@ -32,22 +38,22 @@ use install/remove/upgrade-pkg as with traditionally installed Slackware -
 it is just sub-optimal, since removed packages do not free space, and
 upgraded packages consume additional space and are not compressed.
 
-##sep#id:Community:abstract:enhanced with tons of community packages:title:Community packages
+## sep#id:Community:abstract:enhanced with tons of community packages:title:Community packages
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia sapiente deserunt consectetur,
 quod reiciendis corrupti quo ea aliquid! Repellendus numquam quo, voluptate. Suscipit soluta
 omnis quibusdam facilis, illo voluptates odit!
 
-##sep#id:Daily:abstract:delivered daily:title:Automated build process
+## sep#id:Daily:abstract:delivered daily:title:Automated build process
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia sapiente deserunt consectetur,
 quod reiciendis corrupti quo ea aliquid! Repellendus numquam quo, voluptate. Suscipit soluta
 omnis quibusdam facilis, illo voluptates odit!
 
-##sep#id:Freedom:abstract:to any machine you want:title:Physical & Virtual machines supported
+## sep#id:Freedom:abstract:to any machine you want:title:Physical & Virtual machines supported
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia sapiente deserunt consectetur,
 quod reiciendis corrupti quo ea aliquid! Repellendus numquam quo, voluptate. Suscipit soluta
 omnis quibusdam facilis, illo voluptates odit!
 
-#foot#
+# foot#
