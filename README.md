@@ -7,30 +7,44 @@ Deliver the best Linux distribution
 - anywhere
 - spy-free
 - with the latest versions of the best Open Source Software
-- on a daily basis &ndash; but without forced or otherwise intrusive update process.
+- on a daily basis &ndash; but without forced or otherwise intrusive update process
+- using DWeb/IPFS as distribution medium
+- and iPXE to boot & setup.
 
-### Purpose
+### About the best Linux distro on Earth
+
+Slackware Linux is the oldest actively developed Linux distribution. Being
+developed by a single person (Patrick Volkerding), supported by small team of
+close colaborators rather than a corporation, it has no time-tighted release
+schedule, nor sales plan, nor fancy graphical setup wizard; hence is considered
+as a very hard to set up and maintain on a machine.
+
+Which is not true at all. OK, it may be a little hard to set up for the first
+time for a Linux newbie.
+
+### Enter AdaSTOR/OS.
 
 AdaSTOR/OS is SlackwreLinux-current branch repackaged into several SquashFS
-images and delivered to you the DevOps way via iPXE and IPFS (planned).
+images and delivered to you the DevOps way via IPFS.
+
 New releases are build automatically whenever Patrick releases new packages.
-Packages are grouped into 'slices' &nbsp; SquashFS archives, mounted read-only
+Packages are layered into 'slices' &nbsp; SquashFS images, mounted read-only
 and stacked to provide consistent filesystem image; with writable layer
 mounted on top of them.  That way more than 98% of filesystem data is mounted
 read-only and served from compressed storage, which reduces I/O, which is
 beneficial from both performance and security standpoint.  The 'slices' are
-ready to be used "as-is" just after being downloaded (no installation step
-required); moreover each participant host may serve them to others via IPFS
-(planned), thus reducing bandwith cost of distribution.
+ready to be used "as-is" just after being downloaded, as **no installation step
+is required**.  Moreover each participant host may serve them to others via
+IPFS, thus reducing bandwith cost of distribution.
 
 ## Origins
 
 Few years ago I compressed my entire Slackware system with SquashFS to save
-some space - and was amazed to see how much the system gained in terms of
-loading speed as well.  This process was manual, slow, unreliable, and
-required rebuilding the image each time new packages installed or upgraded.
-So after several iterations I figured out how to break Slackware
-installation in pieces to make updates easier - and today is the day it can
+some space &ndash; and was amazed to see how much the system gained in terms of
+system and program loading speed as well.  This process was manual, slow,
+unreliable, and required rebuilding the image each time new packages installed
+or upgraded.  Hence, after several iterations I figured out how to break
+Slackware installation into pieces to make updates easier - and today is the day it can
 be tested by anyone willing to see Slackware installed within seconds.
 
 Note: the system installed that way is 100% Slackware compatible - you can
@@ -40,19 +54,24 @@ upgraded packages consume additional space and are not compressed.
 
 ## Community packages
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia sapiente deserunt consectetur,
-quod reiciendis corrupti quo ea aliquid! Repellendus numquam quo, voluptate. Suscipit soluta
-omnis quibusdam facilis, illo voluptates odit!
+Slackware Linux consists of about 1,300 packages, grouped in several series:
+**a** is base system, **ap** &ndash; console-based applications,
+**x** is graphical (X-Window) subsystem, **xap** &ndash; gui-based apps,
+**d**, **l**, and **n** stand for development, libraries, and network
+(respectively), and so on.
+
+1,300 is not very much in terms of Linux distros these days, really.  But this
+is just a beginning.  A typical Slacker would install all of them to have
+stable, solid base for further customization.
 
 ## Automated build process
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia sapiente deserunt consectetur,
-quod reiciendis corrupti quo ea aliquid! Repellendus numquam quo, voluptate. Suscipit soluta
-omnis quibusdam facilis, illo voluptates odit!
+Build is triggered whenever a package is added/upgraded/removed from Slackware,
+-current branch only (stable branches are not supported yet).
 
 ## Physical & Virtual machines supported
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia sapiente deserunt consectetur,
-quod reiciendis corrupti quo ea aliquid! Repellendus numquam quo, voluptate. Suscipit soluta
-omnis quibusdam facilis, illo voluptates odit!
+At the moment setup process was tested on QEMU virtual machines and VMs at
+Vultr.com.  Tests on physical machines are scheduled when all issues are
+resolved with virtual machines.
 
