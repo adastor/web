@@ -28,7 +28,7 @@ doc: README.md
 README.md: index.md readme.sed
 	cat index.md | sed -f readme.sed | uniq > README.md
 
-publish: en pl css js license www
+publish: en pl css js license www clean
 	ipfs add -r -w www/index*.html www/license.txt www/js/ www/css/
 	touch publish
 
