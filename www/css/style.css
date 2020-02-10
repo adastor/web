@@ -181,6 +181,12 @@
 .sse .st {
   opacity: 0;
 }
+div.sit {
+  text-align: left;
+  overflow: auto;
+  max-height: 95%;
+  /* TODO: conceal scrollbars during transition */
+}
 .sse .sit {
   opacity: 1;
   -webkit-transform: translate(-50%, -50%) scale(1);
